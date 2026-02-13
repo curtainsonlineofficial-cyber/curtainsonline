@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curtains Online Dubai - Luxury Window Treatments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #0f2e33;
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #19c3e6;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background: #15a5c7;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #0f2e33;
+        }
+        
+        .intro {
+            background: #f6f8f8;
+            text-align: center;
+        }
+        
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #19c3e6;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .card a {
+            color: #19c3e6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            color: #19c3e6;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .cta-section {
+            background: #0f2e33;
+            color: white;
+            text-align: center;
+        }
+        
+        .features {
+            background: #f6f8f8;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .feature-item {
+            padding: 20px;
+        }
+        
+        .feature-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+        .tools {
+            background: #fff9e6;
+        }
+        
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .tool-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tool-card h4 {
+            margin: 15px 0;
+            color: #0f2e33;
+        }
+        
+        footer {
+            background: #0f2e33;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h5 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #19c3e6;
+        }
+        
+        .backlinks {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+        
+        .backlinks h5 {
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .backlinks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .backlinks a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 30px;
+            color: rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <h1><a href="https://curtainsonline.ae/" style="color: white; text-decoration: none;">CURTAINS ONLINE</a></h1>
+            <div>
+                <a href="https://curtainsonline.ae/">Home</a>
+                <a href="https://curtainsonline.ae/products/">Products</a>
+                <a href="https://curtainsonline.ae/product/sheer-curtains/">Sheer</a>
+                <a href="https://curtainsonline.ae/product/bedroom-curtains/">Bedroom</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Curtains Online Dubai</h2>
+            <p style="font-size: 20px;">Smart Window Solutions for Modern Living</p>
+            <a href="https://curtainsonline.ae/" class="btn">curtains online shop</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h2 class="section-title">Curtains Online Dubai – The Smart Way to Upgrade Your Home Décor</h2>
+            <p>In today's fast-paced lifestyle, homeowners and business owners prefer convenience, quality, and affordability—all in one place. Shop curtains online in Dubai and explore hundreds of designs, compare prices, and book free measurements from the comfort of your home.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Why Choose Curtains Online Dubai?</h2>
+            <p style="max-width: 900px; margin: 0 auto 30px; text-align: center; color: #666;">Shopping for curtains online in Dubai offers unmatched convenience and flexibility. Instead of visiting multiple stores, you can browse extensive collections, check fabric samples, and select styles that match your interior theme—all within minutes.</p>
+            <p style="max-width: 900px; margin: 0 auto; text-align: center; color: #666;">One of the biggest advantages of buying <strong>curtains online Dubai</strong> is access to made-to-measure services. Most professional curtain companies offer free site visits, accurate measurements, and expert installation. This ensures a perfect fit for villas, apartments, offices, and hotels.</p>
+        </div>
+    </section>
+
+    <section style="background: #f6f8f8;">
+        <div class="container">
+            <h2 class="section-title">Types of Curtains Available Online in Dubai</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Blackout Curtains</h3>
+                    <p>Ideal for bedrooms, home theaters, and nurseries. These curtains block 90–100% sunlight, ensuring complete privacy and improved sleep quality. In Dubai's bright climate, blackout curtains also help reduce indoor heat and lower electricity bills.</p>
+                    <a href="https://curtainsonline.ae/product/bedroom-curtains/">Shop Bedroom Curtains →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Sheer Curtains</h3>
+                    <p>Lightweight and elegant. They allow natural light to enter while maintaining daytime privacy. Sheers are commonly used in living rooms, balconies, and offices to create a soft and airy feel.</p>
+                    <a href="https://curtainsonline.ae/product/sheer-curtains/">Shop Sheer Curtains →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Eyelet Curtains</h3>
+                    <p>Feature metal rings at the top, allowing smooth movement on curtain rods. They are modern, stylish, and easy to maintain—perfect for contemporary Dubai apartments.</p>
+                    <a href="https://curtainsonline.ae/products/">View Collection →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Pinch Pleat Curtains</h3>
+                    <p>Offer a classic and luxurious appearance. They are commonly used in villas, hotels, and formal living rooms where elegance is a priority.</p>
+                    <a href="https://curtainsonline.ae/products/">View Collection →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Wave Curtains</h3>
+                    <p>Create smooth, flowing folds that look modern and sophisticated. They are highly popular in Dubai's luxury interiors and commercial spaces.</p>
+                    <a href="https://curtainsonline.ae/products/">View Collection →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>Hospital Curtains</h3>
+                    <p>Specialized privacy curtains designed for healthcare facilities. Antimicrobial, fire-retardant, and easy to clean—meeting Dubai healthcare standards.</p>
+                    <a href="https://curtainsonline.ae/product/hospital-curtains/">Shop Hospital Curtains →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Best Fabrics for Curtains Online Dubai</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #666;">Choosing the right fabric is essential when ordering curtains online Dubai. Fabric selection affects light control, durability, and overall appearance.</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div style="font-size: 48px;">🎭</div>
+                    <h4>Velvet</h4>
+                    <p>Thick, luxurious, ideal for blackout. Adds warmth to bedrooms.</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 48px;">🌾</div>
+                    <h4>Linen</h4>
+                    <p>Natural, minimal look. Breathable and lightweight.</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 48px;">✨</div>
+                    <h4>Polyester</h4>
+                    <p>Affordable, durable, easy to maintain. Most popular choice.</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 48px;">👑</div>
+                    <h4>Silk</h4>
+                    <p>Premium finish for luxury villas and formal spaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Custom Made Curtains Online in Dubai</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px;">Every window is different in size and style, especially in Dubai's modern architecture. Custom-made curtains ensure a perfect fit and polished look with free home measurement, fabric sample selection, header style options, motorized curtain systems, and professional installation.</p>
+            <a href="https://curtainsonline.ae/products/" class="btn">Start Measurement</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Motorized Curtains in Dubai</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px; color: #666;">Motorized curtains are gaining popularity in Dubai's smart homes. These curtains can be controlled using remote control, mobile apps, or smart home systems.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>📱 Remote Control</h3>
+                    <p>Easy remote operation</p>
+                </div>
+                <div class="card">
+                    <h3>📶 Smart WiFi</h3>
+                    <p>Connect to home network</p>
+                </div>
+                <div class="card">
+                    <h3>🎤 Voice Control</h3>
+                    <p>Alexa & Google Assistant</p>
+                </div>
+                <div class="card">
+                    <h3>⏰ Timer Automation</h3>
+                    <p>Schedule open/close times</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Benefits of Buying Curtains Online in Dubai</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>✓ Wide Variety</h3>
+                    <p>Hundreds of designs and fabrics to choose from</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Competitive Pricing</h3>
+                    <p>Better prices and seasonal discounts</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Free Services</h3>
+                    <p>Complimentary measurement and installation</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Fast Delivery</h3>
+                    <p>Quick delivery across all Dubai areas</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Easy Customization</h3>
+                    <p>Tailor-made to your exact specifications</p>
+                </div>
+                <div class="card">
+                    <h3>✓ Secure Payments</h3>
+                    <p>Safe and encrypted online transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f6f8f8;">
+        <div class="container">
+            <h2 class="section-title">Trending Curtain Styles in Dubai 2026</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #666;">Interior design trends in Dubai constantly evolve. Stay ahead with these popular styles:</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div style="font-size: 40px;">🎨</div>
+                    <h4>Neutral Tones</h4>
+                    <p style="font-size: 14px; color: #666;">Beige and grey palettes</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">〰️</div>
+                    <h4>Wave Curtains</h4>
+                    <p style="font-size: 14px; color: #666;">Floor-length elegance</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">📱</div>
+                    <h4>Smart Motorized</h4>
+                    <p style="font-size: 14px; color: #666;">App-controlled systems</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">🪟</div>
+                    <h4>Layered Combos</h4>
+                    <p style="font-size: 14px; color: #666;">Sheer + blackout pairs</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">🌿</div>
+                    <h4>Minimalist Linen</h4>
+                    <p style="font-size: 14px; color: #666;">Natural drapes</p>
+                </div>
+                <div class="feature-item">
+                    <div style="font-size: 40px;">⚡</div>
+                    <h4>Energy Efficient</h4>
+                    <p style="font-size: 14px; color: #666;">Thermal & blackout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools">
+        <div class="container">
+            <h2 class="section-title">Helpful Tools for Your Project</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #666;">Planning your curtain installation? Use these handy tools to visualize and budget your project.</p>
+            <div class="tool-grid">
+                <a href="https://chromewebstore.google.com/detail/furniture-cost-calculator/bppdnjddcfinkikodlbficgbkgnmkomo?authuser=0&hl=en" target="_blank" rel="noopener" class="tool-card">
+                    <div style="font-size: 48px; color: #19c3e6;">🧮</div>
+                    <h4>Furniture Cost Calculator</h4>
+                    <p style="font-size: 14px; color: #666;">Calculate your total curtain and furniture costs</p>
+                </a>
+                <a href="https://chromewebstore.google.com/detail/roomsnap-floor-visualizer/bplkfnfngaojfgpjljgjnjdhiojjjadl?authuser=0&hl=en" target="_blank" rel="noopener" class="tool-card">
+                    <div style="font-size: 48px; color: #19c3e6;">🏠</div>
+                    <h4>RoomSnap Floor Visualizer</h4>
+                    <p style="font-size: 14px; color: #666;">Visualize curtains in your space before buying</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Transform Your Space?</h2>
+            <p style="max-width: 700px; margin: 0 auto 30px;">Choose the right curtains today and give your home or office the elegant finish it deserves. With endless fabric options, custom-made solutions, and expert installation services available across Dubai, upgrading your windows has never been easier.</p>
+            <a href="https://curtainsonline.ae/products/" class="btn">Browse Full Collection</a>
+        </div>
+    </section>
+
+    <section style="background: #fff; padding: 40px 0; border-top: 1px solid #eee;">
+        <div class="container">
+            <h3 style="text-align: center; margin-bottom: 30px; color: #0f2e33;">Popular Searches & Resources</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto;">
+                <a href="http://www.google.ps/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">curtains online dubai</a>
+                <a href="http://images.google.tn/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">curtains dubai</a>
+                <a href="http://maps.google.tn/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">Online curtains</a>
+                <a href="http://maps.google.com.lb/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">Curtains shop</a>
+                <a href="http://images.google.com.lb/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">Curtains online dubai</a>
+                <a href="http://maps.google.dz/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">Buy curtains online</a>
+                <a href="http://images.google.dz/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">best curtains dubai</a>
+                <a href="http://www.google.dz/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">window curtains online dubai</a>
+                <a href="http://maps.google.com.np/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">curtains dubai price</a>
+                <a href="http://images.google.jo/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">curtains dubai</a>
+                <a href="http://maps.google.jo/url?q=https://curtainsonline.ae/%2F" style="color: #19c3e6; text-decoration: none; padding: 8px 15px; background: #f6f8f8; border-radius: 5px; font-size: 14px;">curtains dubai</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h1 style="font-size: 28px; margin-bottom: 40px; letter-spacing: 3px;">
+                <a href="https://curtainsonline.ae/" style="color: white; text-decoration: none;">CURTAINS ONLINE</a>
+            </h1>
+            
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="https://curtainsonline.ae/">Home</a></li>
+                        <li><a href="https://curtainsonline.ae/products/">All Products</a></li>
+                        <li><a href="https://curtainsonline.ae/product/sheer-curtains/">Sheer Curtains</a></li>
+                        <li><a href="https://curtainsonline.ae/product/bedroom-curtains/">Bedroom Curtains</a></li>
+                        <li><a href="https://curtainsonline.ae/product/hospital-curtains/">Hospital Curtains</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Collection</h5>
+                    <ul>
+                        <li>Blackout Curtains</li>
+                        <li>Sheer Curtains</li>
+                        <li>Velvet Curtains</li>
+                        <li>Motorized Curtains</li>
+                        <li>Custom Made</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Support</h5>
+                    <ul>
+                        <li>Free Measurement</li>
+                        <li>Installation Service</li>
+                        <li>Shipping & Returns</li>
+                        <li>Fabric Care Guide</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Helpful Tools</h5>
+                    <ul>
+                        <li><a href="https://chromewebstore.google.com/detail/furniture-cost-calculator/bppdnjddcfinkikodlbficgbkgnmkomo?authuser=0&hl=en" target="_blank" rel="noopener">Cost Calculator</a></li>
+                        <li><a href="https://chromewebstore.google.com/detail/roomsnap-floor-visualizer/bplkfnfngaojfgpjljgjnjdhiojjjadl?authuser=0&hl=en" target="_blank" rel="noopener">Room Visualizer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="backlinks">
+                <h5>Popular Searches</h5>
+                <div class="backlinks-grid">
+                    <a href="http://www.google.ps/url?q=https://curtainsonline.ae/">curtains online dubai</a>
+                    <a href="http://images.google.tn/url?q=https://curtainsonline.ae/">curtains dubai</a>
+                    <a href="http://maps.google.tn/url?q=https://curtainsonline.ae/">Online curtains</a>
+                    <a href="http://maps.google.com.lb/url?q=https://curtainsonline.ae/">Curtains shop</a>
+                    <a href="http://images.google.com.lb/url?q=https://curtainsonline.ae/">Curtains online dubai</a>
+                    <a href="http://maps.google.dz/url?q=https://curtainsonline.ae/">Buy curtains online</a>
+                    <a href="http://images.google.dz/url?q=https://curtainsonline.ae/">best curtains dubai</a>
+                    <a href="http://www.google.dz/url?q=https://curtainsonline.ae/">window curtains online dubai</a>
+                    <a href="http://maps.google.com.np/url?q=https://curtainsonline.ae/">curtains dubai price</a>
+                    <a href="http://images.google.jo/url?q=https://curtainsonline.ae/">curtains dubai</a>
+                    <a href="http://maps.google.jo/url?q=https://curtainsonline.ae/">curtains dubai</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Serving all areas of Dubai with premium curtain solutions</p>
+                <p style="margin-top: 10px;">© 2026 Curtains Online Dubai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
